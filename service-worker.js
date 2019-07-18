@@ -27,3 +27,21 @@ workbox.core.setCacheNameDetails({prefix: "vue-pwa"});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+self.addEventListener('notificationclick', function (e) {
+  var action = e.action
+  console.log(`action tag: ${e.notification.tag}`, `action: ${action}`)
+  switch (action) {
+    case 'look':
+      console.log('look')
+      break
+    case 'contact':
+      console.log('contact')
+      break
+    default:
+      console.log(`未处理的action: ${e.action}`)
+      action = 'default'
+      break
+  }
+  e.notification.close()
+})
