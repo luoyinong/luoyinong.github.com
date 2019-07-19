@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.ad32fe24b39d9590d4221c2b3b75b1ed.js"
+  "/precache-manifest.bd6882aa3ab888592cfc5f543a9b06a3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-pwa"});
@@ -27,5 +27,3 @@ workbox.core.setCacheNameDetails({prefix: "vue-pwa"});
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-
-console.log(Window.window.a)
